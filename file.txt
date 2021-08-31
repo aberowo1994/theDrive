@@ -1,0 +1,20 @@
+--background-color: #f7f7f7
+
+--color-one: #0c0c0c
+--color-two: #ffffff
+--primary-color: #	#800080
+--seconadary-color: rgb(81, 81, 175);
+--seconadary-color: 
+
+
+font-family: 'Oswald', sans-serif;
+font-family: 'Poppins', sans-serif;
+
+1px 1px 3px 0px rgba(0,0,0,0.5)
+
+
+below list of background
+#0f162b
+#faf4d9;
+
+main = #31393c;

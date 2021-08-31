@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.0/dist/chart.min.js"></script>
+    <script src="https://kit.fontawesome.com/89c9988113.js" crossorigin="anonymous"></script>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/89c9988113.js" crossorigin="anonymous"></script>
+    <title>The Drive</title>
+  </head>
+
+  <body>
+    <!--
+          this is the menu part
+      -->
+    <div class="menu menu-bar">
+      <ul class="ul">
+        <li class="list focus dashboard">
+          <a href="index.html">
+            <span class="icon">
+              <i class="fas fa-tachometer-alt"></i>
+            </span>
+            <span class="title">Dashboard</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon"><i class="far fa-user"></i></span>
+            <span class="title">Profile</span>
+          </a>
+        </li>
+        <li class="list bookings">
+          <a href="#">
+            <span class="icon">
+              <i class="fas fa-bookmark"></i>
+            </span>
+            <span class="title" data-target=".Bookings">Bookings</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon"><i class="fas fa-file-invoice"></i></span>
+            <span class="title">Invoices</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon">
+              <i class="fas fa-border-style"></i>
+            </span>
+            <span class="title">Orders</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon">
+              <i class="far fa-comment-alt"></i>
+            </span>
+            <span class="title chat-title">Chat us</span>
+            <!-- <span class="icon">
+                this part will have a form submit to
+                the company to read theur complains
+            </span-->
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon">
+              <i class="fas fa-wrench"></i>
+            </span>
+            <span class="title">Settings</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#">
+            <span class="icon">
+              <i class="fas fa-sign-out-alt"></i>
+            </span>
+            <span class="title">Logout</span>
+          </a>
+        </li>
+      </ul>
+
+    </div>
+    <!-- this is where the Main section start from-->
+
+    <div class="main main-section">
+      <div class="topbar main-header">
+        <div class="logo">
+          <span>The Drive</span>
+        </div>
+        <div class="input--box">
+          <label for="search-site"></label>
+          <input type="search" id="search-site" name="q" placeholder="Please enter a search">
+          <button class="search-button">Search</button>
+        </div>
+        <div class="notification">
+          <a href="">
+            <span class="notification-icon">
+              <i class="far fa-bell"></i>
+            </span>
+            <span class="notification-title">notifications</span>
+          </a>
+        </div>
+        <div class="user-name hidden">
+          <span>Abereowo Oluseyi</span>
+        </div>
+        <div class="user user-image">
+          <img src="images/user.jpg" alt="" width="100px" />
+        </div>
+        <div class="switch_wrapper">
+          <button class="switch_button">
+
+          </button>
+        </div>
+        <div class="pallete_container">
+          <div class="pallete_wrap">
+            <div class="pallete pallete_1"></div>
+            <div class="pallete pallete_2"></div>
+            <div class="pallete pallete_3"></div>
+          </div>
+        </div>
+      </div>
+      <!-- 
+        the overview section start from here!------------------------------------------
+      -->
+      <div class="first-page">
+        <div class="overview overview-section">
+          <div class="box box-1">
+            <div class="views">
+              <a href="#">
+                <span class="icon-box">
+                  <i class="fas fa-bus"></i>
+                </span>
+                <span class="no-view">120</span>
+              </a>
+            </div>
+            <span class="box-title"><a href="#"> Available Buses</a></span>
+          </div>
+          <div class="box box-2">
+            <div class="views">
+              <a href="#">
+                <span class="icon-box">
+                  <i class="fas fa-user-tie"></i>
+                </span>
+                <span class="no-view">150</span>
+              </a>
+            </div>
+            <span class="box-title"><a href=""> Drivers On seat</a></span>
+          </div>
+          <div class="box box-3">
+            <div class="views">
+              <a href="#">
+                <span class="icon-box">
+                  <i class="fas fa-clipboard-list"></i>
+                </span>
+
+                <span class="no-view">1000</span>
+              </a>
+            </div>
+            <span class="box-title">
+              <a href=""> Available Tickets</a>
+            </span>
+          </div>
+          <div class="box box-4">
+            <div class="views">
+              <a href="#">
+                <span class="icon-box">
+                  <i class="fas fa-shopping-cart"></i>
+                </span>
+                <span class="no-view">12</span>
+              </a>
+            </div>
+
+            <span class="box-title"> <a href=""> Cart </a></span>
+          </div>
+        </div>
+
+        <section class="section--3">
+          <!--this is the third section------------------------------------------------------>
+          <div class="table">
+            <table id="table-1">
+              <caption class="caption">
+                Our top customers
+              </caption>
+              <tr>
+                <th></th>
+                <th>name</th>
+                <th>Ticket Number</th>
+                <th>location</th>
+                <th>destination</th>
+              </tr>
+              <tr>
+                <td>
+                  <div class="image-td">
+                    <img src="/images/user.jpg" alt="" width="50px" />
+                  </div>
+                </td>
+                <td class="customer-name">Mr jason Oluseyi</td>
+                <td><span>#TicketNo.1234</span></td>
+                <td>lagos</td>
+                <td>imo state</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="image-td">
+                    <img src="/images/white girl.jpeg" alt="" width="50px" />
+                  </div>
+                </td>
+                <td class="customer-name">Miss Aduke ade</td>
+                <td><span>#TicketNo.1234</span></td>
+                <td>lagos</td>
+                <td>Ogun state</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="image-td">
+                    <img src="/images/a guy.jpg" alt="" width="50px" />
+                  </div>
+                </td>
+                <td class="customer-name">Mr tola johnson</td>
+                <td><span>#TicketNo.1234</span></td>
+                <td>lagos</td>
+                <td>Akwa-ibom</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="image-td">
+                    <img src="/images/african beauty.jpg" alt="" width="50px" />
+                  </div>
+                </td>
+                <td class="customer-name">Mrs james kenny</td>
+                <td><span>#TicketNo.1234</span></td>
+                <td>lagos</td>
+                <td>Ibandan</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="image-td">
+                    <img src="/images/A girl.jpg" alt="" width="50px" />
+                  </div>
+                </td>
+                <td class="customer-name">Mrs Amaka Udo</td>
+                <td><span>#TicketNo.1234</span></td>
+                <td>lagos</td>
+                <td>anambra</td>
+              </tr>
+            </table>
+          </div>
+          <!---------------The chart column start from here -->
+          <div class="barchart--Container">
+            <div class="chart-box">
+              <canvas id="myChart"></cancanvas>
+            </div>
+          </div>
+          <!-- <div id="doughnut--container">
+            <div class="doughnut--box">
+              <canvas id="doughnutChart"></canvas>
+            </div>
+          </div> -->
+          <!---------------The chart column ends here ------------------>
+        </section>
+      </div>
+
+      <!--Form  section-->
+      <div class="contact-hidden hide">
+        <form action="" method="GET" class="form">
+          <div class="form-holder">
+            <div class="input-label-holder">
+              <label for="name"> Name </label> <br>
+              <input type="text" name="Name" id="name" minlength="20" maxlength="40" placeholder="John Smith" />
+            </div>
+            <div class="input-label-holder">
+              <label for="email">Email</label> <br>
+              <input type="email" name="email" id="email" placeholder="email@example.com" />
+            </div>
+            <div class="input-label-holder">
+              <label for="complains">Wants to talk to Us?</label> <br>
+              <textarea name="complains" id="complains" cols="20" rows="5" placeholder="Type here..."></textarea>
+            </div>
+            <div class="input-label-holder">
+              <input type="submit" value="send" class="send">
+            </div>
+          </div>
+          <div class="open-close-span close">
+            <span class="close-span">&times;</span>
+          </div>
+        </form>
+      </div>
+      <!-----------------------------------
+         The booking section  starts here
+        --------------------------------------->
+      <section class="booking-section  booking-section-hidden">
+        <div class="booking-filling">
+          <div class="row">
+            <form action="" method="GET" class="booking-form" autocomplete="on">
+              <div class="row">
+                <div class="heading">
+                  <h2>Please fill all the necessary details..</h2>
+                </div>
+              </div>
+              <div class="form_section_1">
+                <div class="row">
+                  <div class="label-input">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" name="firstName" id="firstName" maxlength="50" placeholder="Oluseyi" size="20">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="label-input">
+                    <label for="Surname">surname</label>
+                    <input type="text" name="Surname" id="surname" maxlength="50" placeholder="Kelvin" size="20"
+                      required>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="label-input">
+                    <label for="middleName">Middle Name</label>
+                    <input type="text" name="middleName" id="middleName" maxlength="50" placeholder="Optional"
+                      size="20">
+                  </div>
+                </div>
+              </div>
+              <div class="form_section_2">
+                <div class="row">
+                  <div class="label-input">
+                    <label for="email">Email</label>
+                    <input type="email" id="email2" placeholder="example@example.com">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="label-input">
+                    <label for="confirmEmail">Confirm Email</label>
+                    <input type="email" id="confirmEmail" placeholder="confirm email" required>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="label-input">
+                    <label for="phone">Tel:</label>
+                    <input type="tel" id="phone" placeholder="0801234567" required pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}">
+                  </div>
+                </div>
+              </div>
+              <div class="form_section_3">
+                <div class="row">
+                  <label for="state-select">Your state</label>
+                  <select name="state" id="state-select">
+                    <option value="">--Please choose an option</option>
+                    <option value="lagos" selected>Lagos</option>
+                    <option value="abia">Abia</option>
+                    <option value="rivers">Rivers</option>
+                    <option value="abuja">Abuja</option>
+                    <option value="portharcourt">Portharcourt</option>
+                    <option value="jos">Jos</option>
+                    <option value="delta">Delta</option>
+                    <option value="kaduna">Kaduna</option>
+                    <option value="ado-ekiti">Ado-Ekiti</option>
+                  </select>
+                </div>
+                <div class="row">
+                  <label for="destination-select">Destination</label>
+                  <select name="state" id="destination-select">
+                    <option value="">--Please choose an option</option>
+                    <option value="lagos">Lagos</option>
+                    <option value="abia">Abia</option>
+                    <option value="rivers">Rivers</option>
+                    <option value="abuja">Abuja</option>
+                    <option value="portharcourt">Portharcourt</option>
+                    <option value="jos">Jos</option>
+                    <option value="delta">Delta</option>
+                    <option value="kaduna">Kaduna</option>
+                    <option value="ado-ekiti">Ado-Ekiti</option>
+                  </select>
+                </div>
+                <div class="row">
+                  <div class="birth-year-select">
+                    <label for="dob">DOB:</label>
+                    <input type="date" name="dob" id="dob" value="yyyy-MM-dd">
+                  </div>
+                </div>
+              </div>
+              <div class="form_section_4">
+                <div class="row">
+                  <div class="upload">
+                    <label for="picture">Upload a picture</label>
+                    <input type="file" name="picture" id="picture" accept=".jpg, .jpeg, .png" required="required">
+                  </div>
+                </div>
+              </div>
+              <div class="button-section-container">
+                <button type="button" class="form-btn">submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="booking_feed_container">
+          <div class="cards">
+            <div class="card">
+              <div class="round-image-container">
+                <div class=" round rounded"></div>
+                <div class="card-image">
+                  <img src="/images/user.jpg" alt="" width="150" height="150" class="card-image-sub">
+                </div>
+              </div>
+              <div class="pending">
+                <span>Pending...</span>
+              </div>
+              <div class="content">
+                <table id="table-2">
+                  <tr>
+                    <th scope="row" class="th-2 " cellspacing=" " cellpadding="">First Name :</th>
+                    <td>Oluwashina</td>
+
+                  </tr>
+                  <tr>
+                    <th scope="row" class="th-2">Middle name :</th>
+                    <td>Kelvin</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="th-2">last Name :</th>
+                    <td>badmus</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="th-2">Destination :</th>
+                    <td>abuja</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="th-2">state :</th>
+                    <td>lagos</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="th-2">price :</th>
+                    <td>#20,000</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="button-card">
+                <a href="#" class="click download">Download</a>
+                <a href="#" class="click save">Save</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+    </div>
+
+
+  </body>
+
+</html>
