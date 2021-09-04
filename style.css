@@ -1201,7 +1201,7 @@ booking section styling start here
 
 
 .profile--container {
-  /* border: 3px solid green; */
+  border: 3px solid green;
   height: 100%;
   width: 100%;
 }
@@ -1365,6 +1365,7 @@ booking section styling start here
   background: var(--verify-color);
   padding: 10px 10px;
   border-radius: 10px;
+  text-align: center;
 }
 
 .staff--send .verify--box .profile--title--color {
@@ -1377,18 +1378,12 @@ booking section styling start here
   /* border: 2px solid green; */
 }
 
+.second--inner--profile {
+  height: 100%;
+  width: 1000%;
+  border: 2px solid red;
+  color: var(--color-two);
+}
+.second--inner--profile .work--title {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
