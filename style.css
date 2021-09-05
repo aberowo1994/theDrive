@@ -22,6 +22,8 @@
   --cards-box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.2),
   -3px -3px 10px 0px rgba(0,0,0,0.2);
   --verify-color: rgba(255,255,255,0.89);
+  --span-color: rgba(255,255,255,0.6);
+
 }
 
 
@@ -56,6 +58,8 @@ body {
   inset -1px -1px 10px -1px rgba(0, 0, 0, 0.2);
   --cards-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
   --verify-color: rgba(0,0,0,0.89);
+  --span-color: rgba(0,0,0,0.6);
+
 
 }
 
@@ -88,6 +92,7 @@ body {
   left: 0px;
   bottom: 0px;
   width: 60px;
+  height: 100%;
   /* width: 300px; */
   background-color: var(--menu-color);
   box-sizing: initial;
@@ -1199,18 +1204,23 @@ booking section styling start here
   margin-right: 30px;
 }
 
-
+/*******************************
+this is the styling section of the Profile page
+*/
 .profile--container {
-  border: 3px solid green;
+  /* border: 3px solid green; */
   height: 100%;
   width: 100%;
+  font-family: "Poppins";
+  /* font-size: 20px; */
+  overflow: hidden;
 }
 
 .first--inner--profile {
   /* border: white 1px solid; */
   height: 100%;
   width: 100%;
-  padding:60px 80px;
+  padding:60px 40px;
   display: grid;
   grid-template-columns: 300px 1fr;
   grid-auto-rows: 300px;
@@ -1235,6 +1245,7 @@ booking section styling start here
   top: 0;
   left: 0;
   object-fit: cover;
+  cursor: pointer;
   /* border-radius: 50px; */
 }
 
@@ -1247,13 +1258,13 @@ booking section styling start here
 .profile--content a {
   text-decoration: none;
 }
- .profile--title {
-  /* border: white 2px solid; */
+ /* .profile--title {
+  border: white 2px solid;
 
-}
+} */
  .profile--title--color {
   color: var(--color-two);
-  font-size: 15px;
+  font-size: 20px;
   font-family: 'poppins';
 }
 
@@ -1279,6 +1290,10 @@ booking section styling start here
 .staff--profile .icon--profile {
   /* border: white 2px solid; */
   color: var(--hover-color);
+  /* background: var(--color-two); */
+  padding: 10px;
+  border-radius: 100%;
+
 }
 
 .staff--profile .profile--title--color {
@@ -1293,8 +1308,11 @@ booking section styling start here
   font-style: oblique; 
 }
 .icon--profile {
+  font-style: fontAwesome;
   color: var(--hover-color);
   font-size: 20px;
+
+  font-weight: bolder;
 }
 
 .staff--ranking {
@@ -1325,9 +1343,9 @@ booking section styling start here
   justify-content: flex-start;
   gap: 10px;
 }
-.staff--ranking .star--widget {
-  /* border: 2px solid white; */
-}
+/* .staff--ranking .star--widget {
+  border: 2px solid white;
+} */
 
 .staff--ranking  .star--widget input {
   display: none;
@@ -1380,10 +1398,226 @@ booking section styling start here
 
 .second--inner--profile {
   height: 100%;
-  width: 1000%;
-  border: 2px solid red;
+  width: 100%;
+  /* border: 2px solid red; */
   color: var(--color-two);
+  display: grid;
+  padding: 20px  40px;
+  grid-template-columns: 400px 1fr;
+  grid-auto-rows: 400px;
+  column-gap: 50px;
+}
+.second--inner--profile .second--inner--first--column {
+  /* border: 2px solid green; */
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.second--inner--profile .work {
+  line-height: 2;
+}
+.work [data-work-span="1"] {
+  display: inline-block;
+  /* background:rgba(0, 0, 0, 0.6); */
+  color: var(--hover-color);
+  font-weight: 600;
+  text-align: center;
+  /* font-style: oblique; */
+  font-size: 20px;
+}
+.work [data-work-span="1"]::after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 2px;
+  background: var(--span-color);
+  left: 15%;
+  border-radius: 30px;
+  transform: translateY(22px)
 }
 .second--inner--profile .work--title {
+  /* border: 2px solid red; */
+  width: 100%;
+  height: 100%;
+  line-height: 1.5;
+  /* background: green; */
 
+}
+.work--title p {
+  margin-top: 20px;
+}
+.work--branch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.work--branch span:nth-child(1) {
+  font-size: 1.5em;
+  font-weight: bolder;
+  letter-spacing: 1.5px;
+  margin-top: 20px;
+}
+.work--branch [data-main-span="branch"] {
+  background: var(--verify-color);
+  color: var(--hover-color);
+  font-weight: bolder;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.my--skills {
+  /* border: 2px solid red; */
+  margin-top: 50px;
+  line-height: 1.5;
+  width: 100%;
+  height: 100%;
+}
+
+.my--skills [data-skills="my--skill"] {
+  display: inline-block;
+  /* background:rgba(0, 0, 0, 0.6); */
+  color: var(--hover-color);
+  font-weight: 600;
+  text-align: center;
+  /* font-style: oblique; */
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+.my--skills [data-skills="my--skill"]::after {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 2px;
+  background: var(--span-color);
+  left: 25%;
+  border-radius: 30px;
+  transform: translateY(15px)
+}
+.skill--lists {
+  margin-top: 20px;
+}
+
+/* styling of the second column of second inner starts here */
+.second--inner--profile .second--inner--second--column{
+  /* border: 2px solid grey; */
+  height: 100%;
+  width: 100%;
+  /* border: 2px solid navajowhite; */
+
+}
+
+/* .contact--information {
+} */
+
+.contact--information [data-info="information"] {
+  display: inline-block;
+  /* background:rgba(0, 0, 0, 0.6); */
+  color: var(--hover-color);
+  font-weight: 600;
+  text-align: center;
+  /* font-style: oblique; */
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.contact--information .contacts--lists {
+  /* border: 2px solid navajowhite; */
+  margin-top: 18px;
+  line-height: 2.5;
+
+}
+
+.contacts--lists .phn--num {
+  display: inline-block;
+  /* position: relative; */
+}
+
+.phn--num [data-contacts="1"] {
+  font-size: 18px;
+  font-weight: 500;
+}
+ .phn--num [data-contacts="2"]{
+  margin-left: 50px;
+  /* background: #000; */
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.contacts--lists .address [data-add="1"] {
+  font-size: 18px;
+  font-weight: 500;
+}
+.contacts--lists .address [data-add="2"] {
+   margin-left: 35px;
+  /* background: #000; */
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.contacts--lists .contact--email [data-email="1"] {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.contacts--lists .contact--email [data-email="2"] {
+
+  margin-left: 58px;
+  /* background: #000; */
+  font-size: 18px;
+  font-weight: 500; 
+}
+
+.basic--info {
+  /* border: 2px solid navajowhite; */
+  margin-top: 10px;
+  line-height: 2.5;
+}
+
+.basic--info [data-basic="basic"] {
+  display: inline-block;
+  /* background:rgba(0, 0, 0, 0.6); */
+  color: var(--hover-color);
+  font-weight: 600;
+  text-align: center;
+  /* font-style: oblique; */
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+
+.basic--info .birth--year {
+  /* border: 2px solid navajowhite; */
+  margin-top: 10px;
+
+}
+
+.birth--year [data-birth="1"] {
+font-size: 18px;
+font-weight: 500;
+}
+.birth--year [data-birth="2"] {
+  margin-left: 35px;
+  /* background: #000; */
+  font-size: 18px;
+  font-weight: 500; 
+
+}
+
+.contact--gender [data-gender="1"] {
+font-size: 18px;
+font-weight: 500;
+}
+.contact--gender [data-gender="2"] {
+ margin-left: 48px;
+  /* background: #000; */
+  font-size: 18px;
+  font-weight: 500; 
+}
+
+.prof--container--hidden {
+  /* border: 2px solid red; */
+  display: none;
 }

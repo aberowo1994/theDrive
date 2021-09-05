@@ -27,13 +27,14 @@
             <span class="title">Dashboard</span>
           </a>
         </li>
-        <li class="list">
+        <li class="list" id="li--profile">
           <a href="#">
             <span class="icon"><i class="far fa-user"></i></span>
             <span class="title">Profile</span>
           </a>
         </li>
-        <li class="list bookings">
+        <li
+         class="list bookings">
           <a href="#">
             <span class="icon">
               <i class="fas fa-bookmark"></i>
@@ -107,7 +108,7 @@
           </a>
         </div>
         <div class="user-name hidden">
-          <span>Miss Aduke Sarah</span>
+          <span>Babel Sarah</span>
         </div>
         <div class="user user-image">
           <img src="images/Aduke.jpg" alt="" width="100px" />
@@ -128,7 +129,7 @@
       <!-- 
         the overview section start from here!------------------------------------------
       -->
-      <div class="first-page" hidden>
+      <div class="first-page">
         <div class="overview overview-section">
           <div class="box box-1">
             <div class="views">
@@ -294,7 +295,7 @@
       <!--The profile section start here-->
 
 
-      <div class="profile--container prof--container">
+      <div class="profile--container prof--container--hidden">
         <div class="first--inner--profile first--inner--container">
           <div class="inner--image">
             <img src="/images/Aduke.jpg" alt="" class="profile--image">
@@ -303,7 +304,7 @@
           <div class="profile--content">
             <div class="profile--title">
               <div class="staff--profile">
-                <span data-profile='name'>Iyanu sarah</span>
+                <span data-profile='name'>Babel sarah</span>
 
                 <a href="#" class="link--location">
                   <span class="icon--profile"><i class="fas fa-map-marker-alt"></i></span>
@@ -323,20 +324,20 @@
                 <div class="star--widget">
                   <input type="radio" name="rate" id="rate--5" />
                   <label for="rate--5"><i class="fas fa-star"></i></label>
-                  <input type="radio" name="rate" id="rate--4"/>
+                  <input type="radio" name="rate" id="rate--4" />
                   <label for="rate--4"><i class="fas fa-star"></i></label>
-                  <input type="radio" name="rate" id="rate--3"/>
+                  <input type="radio" name="rate" id="rate--3" />
                   <label for="rate--3"><i class="fas fa-star"></i></label>
-                  <input type="radio" name="rate" id="rate--2"/>
+                  <input type="radio" name="rate" id="rate--2" />
                   <label for="rate--2"><i class="fas fa-star"></i></label>
-                  <input type="radio" name="rate" id="rate--1"/>
+                  <input type="radio" name="rate" id="rate--1" />
                   <label for="rate--1" class="label--1">
                     <i class="fas fa-star"></i></label>
                 </div>
               </div>
             </div>
             <div class="staff--send">
-              <a href="#"> 
+              <a href="#">
                 <span class="icon--profile"><i class="fas fa-far fa-sticky-note"></i></span>
                 <span class="profile--title--color">Send message</span>
               </a>
@@ -355,18 +356,20 @@
         </div>
         <div class="row">
           <div class="second--inner--profile second--inner--container">
-            <div class="row">
+            <div class="second--inner--first--column">
               <div class="work">
-                <span>work</span>
+                <span data-work-span="1">work</span>
                 <div class="work--title">
-                  <span>Lekki,Lagos Nigeria</span>
-                  <span>Main Branch</span>
+                  <div class="work--branch">
+                    <span>Lekki,Lagos Nigeria</span>
+                    <span data-main-span="branch">Main Branch</span>
+                  </div>
                   <p>23, Victoria Island lagos</p>
                 </div>
               </div>
               <div class="row">
-                <div class="my--skill">
-                  <span>My Skill</span>
+                <div class="my--skills">
+                  <span data-skills="my--skill">My Skill</span>
                   <div class="skill--lists">
                     <p>Frontdesk IT </p>
                     <p>Customer Service</p>
@@ -375,37 +378,37 @@
                 </div>
               </div>
             </div>
-          <!--second column of the second inner profile-->
-          <div class="row">
-            <div class="contact--information">
-              <span>Contact Information</span>
-              <div class="contacts--lists">
-                <div class="phn--num">
-                  <span>Phone:</span>
-                  <span>+23481234567</span>
+            <!--second column of the second inner profile-->
+            <div class="second--inner--second--column">
+              <div class="contact--information">
+                <span data-info="information">Contact Information</span>
+                <div class="contacts--lists">
+                  <div class="phn--num">
+                    <span data-contacts="1">Phone:</span>
+                    <span data-contacts="2">+23481234567</span>
+                  </div>
+                  <div class="address">
+                    <span data-add="1">Address:</span>
+                    <span data-add="2">19, i don't really know street lagos.</span>
+                  </div>
+                  <div class="contact--email">
+                    <span data-email="1">Email:</span>
+                    <span data-email="2">abc@example.com</span>
+                  </div>
                 </div>
-                <div class="address">
-                  <span>Address:</span>
-                  <span>19, i don't really know street lagos.</span>
+              </div>
+              <div class="basic--info">
+                <span data-basic="basic">Basic information</span>
+                <div class="birth--year">
+                  <span data-birth="1">Birthday:</span>
+                  <span data-birth="2"> Jan 10, 1999</span>
                 </div>
-                <div class="contact--email">
-                  <span>Email:</span>
-                  <span>abc@example.com</span>
+                <div class="contact--gender">
+                  <span data-gender="1">Gender:</span>
+                  <span data-gender="2">Female</span>
                 </div>
               </div>
             </div>
-            <div class="basic--info">
-              <span>Basic information</span>
-              <div class="birth--year">
-                <span>Birthday:</span>
-                <span> Jan 10, 1999</span>
-              </div>
-              <div class="contact--gender">
-                <span>Gender:</span>
-                <span>Female</span>
-              </div>
-            </div>
-          </div>
 
           </div>
         </div>

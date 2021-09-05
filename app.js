@@ -26,14 +26,25 @@ let user = document.querySelector('.user');
 let userName = document.querySelector('.user-name');
 let topBar = document.querySelector('.topbar');
 let palleteContainer = document.querySelector('.pallete_container');
+const profile = document.getElementById('Profile');
 let myBarChart = document.getElementById('myChart');
-
+let liProfile = document.getElementById("li--profile")
+let profileContainer = document.querySelector('.profile--container');
 /**
  * the  booking menu implementation start here
  */
+
+
+liProfile.addEventListener('click', (e)=> {
+  firstPage.classList.add('first-page-hidden');
+  bookingSection.classList.add('booking-section-hidden');
+  profileContainer.classList.remove('prof--container--hidden')
+  
+})
 bookings.addEventListener('click', (event) => {
   firstPage.classList.add('first-page-hidden');
   bookingSection.classList.remove('booking-section-hidden');
+  profileContainer.classList.add('prof--container--hidden')
 });
 /**
  * the  booking menu implementation endshere
